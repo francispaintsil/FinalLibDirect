@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  overflow: hidden;
+}
+
+.App{
+  background: url('../src/Asset/sun-tornado.svg');
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  place-items: center;
+}
+
+.login{
+  width: 55%;
+  height: 70%;
+  /* background-color: rgb(36, 35, 35); #E476D1*/
+  border: 10px solid rgb(36, 35, 35);
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgb(36, 35, 35);
+  padding: 5px;
+  display: flex;
+}
+
+.login-bar{
+  width: 30%;
+  height: 100%;
+  background-color: rgb(36, 35, 35);
+  color: white;
+  display: grid;
+  place-items: center; 
+  border-top-left-radius: 30px;
+}
+
+.login-bar p:nth-child(1){
+  font-size: 3.2em;
+  font-weight: bolder;
+  text-shadow: 0px 0px 8px #E476D1;
+  /* color: transparent; */
+}
+
+.login-bar p:nth-child(2){
+  text-decoration: underline;
+  text-shadow: 0px 0px 8px #E476D1;
+
+}
+
+.login-content{
+  width: 70%;
+  height: 100%;
+  background-color: rgb(36, 35, 35);
+  z-index: 100;
+  margin-left: 5px;
+  border-bottom-right-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+.login-content section{
+  width: 70%;
+  height: 80%;
+  /* box-shadow:0px 0px 4px #E476D1; */
+
+}
+
+.inputBox{
+  width: 100%;
+  height: 20%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+.inputBox p{
+  font-size: 1em;
+  color: white;  
+}
+
+.inputBox input{
+  width: 100%;
+  height: 70%;
+  font-size: 1em;
+  font-weight: bolder;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color:white;
+  text-align: center;
+  border-bottom: 3px solid #E476D1;
+}
+
+input:-webkit-autofill {
+  background-color: transparent;
+}
+
+.ButtonWrapper{
+  width: 100%;
+  height: 15%;
+  /* background-color: rgb(126, 57, 57); */
+  display: flex;
+  justify-content: space-between;
+}
+
+.ButtonWrapper button{
+  height: 50px;
+  width: 100px;
+  background-color: transparent;
+  border: none;
+  font-size: 1.1em;
+  cursor: pointer;
+  color: white;
+  border-bottom: 3px solid #E476D1;  
+}
+
+.shelf{
+  width: 100%;
+  height: 50%;
+  background-color: tomato;
+  display: flex;
+  justify-content: space-between;
+}
+
+.book-container{
+  width: 160px;
+  height: 150px;
+  border: 2px solid #E476D1;
+  padding: 3px;
+  margin: 5px;
+}
+
+.book{
+  width: 100%;
+  height: 100%;
+  background-color: #e476d2;
+  border-top-left-radius: 15px;
+  display:grid;
+  grid-template: repeat(10, 2fr) / repeat(10, 2fr);
+}
+
+.book .title{
+  grid-area: 4 / 1 / span 4 / span 10;
+  font-weight: bolder;
+  align-items: center;
+  color: inherit;
+  font-size: 0.9em;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.book .author{
+
+}
+
+.book .year{
+  grid-area: 8 / 7 / span 2 / span 10;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 0.7em;
+}
+
+.book .qty{
+  grid-area: 1 / 9 / span 2 / span 10;
+  text-align: center;
+  font-weight: bolder;
+  background-color: rgb(36, 35, 35);
+  color: white;  
+}
+
+.book .action{
+  grid-area: 10 / 1 / span 1 / span 10;
+  border: none;
+  cursor: pointer;
+  font-weight: bolder;
+  background-color: rgb(36, 35, 35);
+  color: white;
+}
+
+.library{
+  width: 100%;
+  height: 100vh;
+  display: flex;;
+  flex-direction: column;
+}
+
+.library-control{
+  width: 100%;
+  height: 10%;
+  background-color: rgb(36, 35, 35);
+ }
+
+.library-content{
+  width: 100%;
+  height: 90%;
+  margin-top: 5px;  
+  display: grid;
+  grid-template: repeat(25,2fr) / repeat(35, 2fr);
+}
+
+.library-toolbox{
+  grid-area: 2/8/span 7/span 4;
+  border:3px solid rgb(36, 35, 35);
+  display: grid;
+  place-items: center;
+  border-right: none;
+}
+
+.library-toolbox div{
+  height: 99%;
+  width: 99%;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;  
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.library-toolbox div button{
+  width: 95%;
+  height: 25%;
+  background-color: rgb(36, 35, 35);
+  color: white;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #E476D1;
+  cursor: pointer;
+}
+
+.library-shelf{
+  grid-area: 2/12/span 23/span 20;
+  /* background-color: rgb(36, 35, 35); */
+  border: 3px solid rgb(36, 35, 35);
+  display: grid;
+  place-items: center;
+}
+
+.library-view{
+  width: 99%;
+  height: 99%;
+  background-color: rgb(36, 35, 35);
+  margin: 5px;
+}
+
+.library-view .top{
+  height: 15%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(36, 35, 35);
+}
+/* .library-view  */
+.library-view .main{
+  height: 430px;
+  min-height: 450px;
+  max-height: 500px;
+  width: 100%;
+  background-color: rgb(36, 35, 35);
+  overflow-y: auto;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 4px;
+}
+
+.library-view .bottom{
+  height: 30px;
+  width: 100%;
+  background-color: rgb(36, 35, 35);
+  height: 30px;
+  display: grid;
+  place-items: center;
+}
+
+.bottom .counter{
+  width: 10%;
+  height: 100%;
+  background-color: #E476D1;
+  border-radius: 20px;
+}
+
+.group{
+  width: 95%;
+  height: fit-content;
+  margin: 5px;
+  border: 2px solid #E476D1
+}
+
+.group .top{
+  width: 100%;
+  height: 30px;
+  background-color: #E476D1;
+  cursor: pointer;
+}
+
+.group .redetail{
+  width: 100%;
+  min-height: 50px;
+  /* height: 50px; */
+  max-width: 100%;
+  max-height: 500px;
+  /* background-color: rgb(73, 80, 80); */
+  margin-top: 2px;
+  overflow-y: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.bookModifier-wrapper{
+  width: 50%;
+  height: 85%;
+  border: 5px solid rgb(36, 35, 35);
+}
+
+.bookModifier{ /*create book*/
+  width: 98%;
+  height: 97%;
+  margin: 5px;
+  background-color: rgb(36, 35, 35);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
